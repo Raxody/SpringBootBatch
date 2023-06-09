@@ -8,18 +8,13 @@ import javax.sql.DataSource;
 
 @Configuration
 public class ApplicationConfig {
-
     @Bean
-    public DataSource dataSource(){
+    public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.driver");
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/batch_database");
         dataSource.setUsername("root");
         dataSource.setPassword("root");
         return dataSource;
     }
-
-
-
-
 }
